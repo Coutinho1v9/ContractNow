@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Contrato Locação Residencial</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+
+    <style>
+
+        p {
+            font-size: 12px;
+            color: black;
+            font: 'Arial';
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    
+        body {
+            margin: 0;
+            padding: 0;
+            height: 10vh;
+            background-image: linear-gradient(to bottom right, white, #999);
+            background-position: center;
+            background-origin: unset;
+            background-repeat: no-repeat;
+        }
+        
+        .container {
+            width: 650px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: Arial;
+            text-align: center;
+            padding: 10px 0;
+            color: dimgray;
+        }
+
+
+        h2 {
+            font-family: Arial;
+            text-align: center;
+            padding: 20px 0;
+            color: black;
+        }
+
+
+        .actions {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #save {
+            background-color: #fff;
+            padding: 10px 20px;
+            border: 1px solid #999;
+            font-size: 2em;
+        }
+
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+            font-size: 12px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="assets/css/editor.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Contrato Locacao Residencial</h1>
+
+        <textarea name="editor" id="editor" cols="12" rows="12">
+            <h1 style="text-align: center;">Contrato Locação Residencial</h1>
+            <p style="line-height: 30px;"><b>LOCADOR:</b> <input class="inputUser" type="text" id="emitente" style="outline: none;
+                border: none;
+                border-bottom: 1px solid gray; width: 50%;"/>, portador da cédula de identidade R.G. nº: 
+                <input class="inputUser" type="text" id="rg" style="outline: none; width: 16%;
+                border: none;
+                border-bottom: 1px solid gray;" /> , e CPF nº: 
+                <input class="inputUser" type="text" id="cpf" style="outline: none; width: 19%;
+                border: none;
+                border-bottom: 1px solid gray;"/> , residente a domicilio a  
+                <input class="inputUser" type="text" id="lugar" style="outline: none;
+                border: none;
+                border-bottom: 1px solid gray;"/></p>
+
+            <p style="line-height: 30px; letter-spacing: 1,5px"> <b>LOCATÓRIO:</b> <input class="inputUser" type="text" id="locatorio" style="outline: none; width: 50%;
+                border: none;
+                border-bottom: 1px solid gray;"/>, portador da cédula de identidade R.G. nº:
+                <input class="inputUser" type="varchar(8)" id="rg_locatorio" style="outline: none; width: 16%;
+                border: none;
+                border-bottom: 1px solid gray;"/> , e CPF nº: 
+                <input class="inputUser" type="varchar(10)" id="cpf_locatorio" style="outline: none; width: 19%;
+                border: none;
+                border-bottom: 1px solid gray;"/> , residente a domicilio a 
+                <input class="inputUser" type="text" id="lugarLocatorio" style="outline: none;
+                border: none;
+                border-bottom: 1px solid gray;"/></p>
+                <h2>CLAUSULA 1ª. DO OBJETO DA LOCACAO</h2>
+                <p style="line-height: 30px; letter-spacing: 1,5cm;"> O LOCADOR cede para locação residencial ao LOCATÁRIO, o imóvel situado <input class="inputUser" type="text" id="enderecoLocacao" style="outline: none;
+                    border: none;
+                    border-bottom: 1px solid gray;"/></p>
+                <p> 2ª A locação destina-se ao uso exclusivo como residência e domicilio do LOCATÁRIO.</p>
+                <p> 3ª O prazo de locação é de <input class="inputUser" type="text" id="prazoLocacao" style="outline: none;
+                    border: none;
+                    border-bottom: 1px solid gray;"/>, iniciando-se em <input class="inputUser" type="varChar(1)" id="dataInicial" style="outline: none;
+                    border: none;
+                    border-bottom: 1px solid gray;  width: 5%;"/>/<input class="inputUser" type="varChar(1)" id="dataInicial" style="outline: none;
+                    border: none;
+                    border-bottom: 1px solid gray;  width: 5%;"/>/<input class="inputUser" type="varChar(1)" id="dataInicial" style="outline: none;
+                    border: none;
+                    border-bottom: 1px solid gray; width: 7%;"/>e terminando em <input class="inputUser" type="varChar(1)" id="dataFinal" style="outline: none;
+                    border: none;
+                    border-bottom: 1px solid gray;  width: 5%;"/>/<input class="inputUser" type="varChar(1)" id="dataFinal" style="outline: none;
+                    border: none;
+                    border-bottom: 1px solid gray;  width: 5%;"/>/<input class="inputUser" type="varChar(1)" id="dataFinal" style="outline: none;
+                    border: none;
+                    border-bottom: 1px solid gray; width: 7%;"/>, limite de tempo em que o imóvel objeto do presente deverá ser restituído independentemente de qualquer notificação ou interpelação sob pena de caracterizar infração contratual.
+                <p>4ª O aluguel mensal será de R$ <input type="text" id="valorImovel" style="outline: none; width: 9px;
+                    border: none;
+                    border-bottom: 1px solid gray;"/> e deverá ser pago até a data de seu vencimento, todo dia <input type="text" id="diaPagamento" style="outline: none; width: 9px;
+                border: none;
+                border-bottom: 1px solid gray;"/> do mês seguinte ao vencido, no local do endereço do LOCADOR ou outro que o mesma venha a designar.
+                <p>4.1) A impontualidade acarretará juros moratórios na base de 1% (um por cento) ao mês calculado sobre o valor do aluguel. O atraso superior a 30 (trinta) dias implicará em correção monetária do valor do aluguel e encargos de cobrança correspondentes a 10% (dez por cento) do valor assim corrigido.</p>
+                    <p>4.2) O pagamento de qualquer dos aluguéis não implica em renúncia do direito de cobrança de eventuais diferenças de aluguéis, de encargos ou impostos que oportunamente não tiverem sidos lançados nos respectivos recibos.</p></p>
+                    <p>Cláusula 5ª.     Havendo prorrogação tácita ou expressa do presente contrato o mesmo será reajustado a preço de mercado sem qualquer relação com o patamar aqui pactuado a ser estabelecido pelo LOCADOR, que poderá ainda estipular, de comum acordo com o LOCATÁRIO, o índice de reajuste e periodicidade.</p>
+                    <button class="btnClausula" onclick="adiconaClausula()">Adicionar mais clausulas</button><br></br>
+                </textarea>
+    </div>
+
+    <script>
+        function getValues(){
+            document.getElementById('data_Inicial').innerHTML = document.getElementById('dataInicial').value;
+            document.getElementById('data_Final').innerHTML = document.getElementById('dataFinal').value;
+            document.getElementById('valor_Imovel').innerHTML = document.getElementById('valorImovel').value;
+            document.getElementById('dia_Pagamento').innerHTML = document.getElementById('diaPagamento').value;
+            document.getElementById('placa_Veiculo').innerHTML = document.getElementById('placaVeiculo').value;
+        }
+    </script>
+
+    <script>
+        function gerarContrato() {
+            document.getElementById('contrato_emitente').innerHTML = document.getElementById('emitente').value;
+            document.getElementById('contrato_rg').innerHTML = document.getElementById('rg').value;
+            document.getElementById('contrato_cpf').innerHTML = document.getElementById('cpf').value;
+            document.getElementById('contrato_lugar').innerHTML = document.getElementById('lugar').value;
+            document.getElementById('contrato_locatorio').innerHTML = document.getElementById('locatorio').value;
+            document.getElementById('contrato_LocatorioRg').innerHTML = document.getElementById('rg_locatorio').value;
+            document.getElementById('contrato_locatorioCpf').innerHTML = document.getElementById('cpf_locatorio').value;
+            document.getElementById('contrato_lugarLocatorio').innerHTML = document.getElementById('lugarLocatorio').value;
+            document.getElementById('contrato_valor').innerHTML = document.getElementById('valor').value;
+            // window.print('imprimirContrato');
+        }
+
+        imprimirContrato() {
+            window.print("imprimir")
+        }
+
+        function dataAtual(){
+            let dataAtual = new Date();
+            return data.getDate() + "/" + (data.getMonth()+1) + "/" + data.getFullYear();
+        }
+        function adiconaClausula(){
+            let div = document.querySelector('.container')
+                div.innerHTML = `
+                <p style="line-height: 30px; letter-spacing: 1,5px">Cláusula 9ª. <input class="inputUser" type="varchar(6)" id="clausulaNova" style="outline: none;
+                    border: none;
+                    border-bottom: 1px solid gray;"</input>
+                `
+            }
+
+    </script>
+
+
+    <div class="actions">
+        <button onclick="document.getElementById('CDEditorIframe').save();" id="salvarContrato">Salvar Contrato</button>
+        <button onclick="document.getElementById('CDEditorIframe').contentWindow.print();" id="imprimirContrato">Imprimir Contrato</button>
+    </div>
+
+    <script src="assets/js/editor.js"></script>
+
+    <script>
+        var editor = new CDEditor('#editor');
+    </script>
+
+</body>
+
+</html>
